@@ -1,0 +1,36 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">You selected user {{userdetails.name}}</span>
+</nav>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">id</th>
+      <td>{{userdetails.id}}</td>
+    </tr>
+    
+    <tr>
+      <th scope="row">Name</th>
+      <td>{{userdetails.name}}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">username</th>
+      <td>{{userdetails.username}}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">email</th>
+      <td>{{userdetails.email}}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">address</th>
+      <td>{{userdetails.address.street}}, {{userdetails.address.suite}}, {{userdetails.address.city}}, {{userdetails.address.zipcode}}</td>
+    </tr>
+  </tbody>
+</table>
+
+  <div style="text-align: center;">
+    <button class="btn btn-primary" (click)="goback()">Go Back to all users</button>
+  </div>

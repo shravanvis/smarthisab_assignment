@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Albums of selected user</span>
+  </nav>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">userId</th>
+        <th scope="col">title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let album of albums">
+        <th scope="row">{{album.id}}</th>
+        <td>{{album.userId}}</td>
+        <td [routerLink]="['//' + '/albums/' + album.id, 'photos']">{{album.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="text-align: center;">
+    <button class="btn btn-primary" (click)="goback()">Go Back</button>
+  </div>

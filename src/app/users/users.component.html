@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">All Users</span>
+</nav>
+
+<p style="color: red;">Click on id to get users details.</p>
+<p style="color: red;">Click on Name to get users albums.</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">All Users</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row"><a [routerLink]="['/user',user.id]"> {{user.id}}</a></th>
+        <td [routerLink]="[user.id,'albums']">{{user.name}}</td>
+      </tr>
+    </tbody>
+  </table>

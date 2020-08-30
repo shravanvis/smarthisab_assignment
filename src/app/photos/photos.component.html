@@ -1,0 +1,36 @@
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Photos of selected album</span>
+    <div style="text-align: end;">
+        <button class="btn btn-primary" (click)="back()">Back</button>
+      </div>
+  </nav>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">albumId</th>
+        <th scope="col">title</th>
+        <th scope="col">url</th>
+        <th scope="col">thumbnailUrl</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let photo of photos">
+        <th scope="row">{{photo.albumId}}</th>
+        <td>{{photo.title}}</td>
+        <td><img src="{{photo.url}}" style="width: 100px;" alt=""></td>
+        <td><img src="{{photo.thumbnailUrl}}" style="width: 50px;" alt=""></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
